@@ -1,2 +1,31 @@
 # project-1-for-microIT
 calculator project
+<br>
+Python code for the calculator:
+<br>
+def calculate(a, b, op):
+    try:
+        a = float(a)
+        b = float(b)
+        if op == '+':
+            return a + b
+        elif op == '-':
+            return a - b
+        elif op == '*':
+            return a * b
+        elif op == '/':
+            if b == 0:
+                return "Error: Division by zero"
+            else:
+                return a / b
+        else:
+            return "Invalid operator"
+    except:
+        return "Invalid input"
+
+a = input("Enter first number: ")
+b = input("Enter second number: ")
+op = input("Enter operation (+, -, *, /): ")
+
+result = calculate(a, b, op)
+print("Result:", result)
